@@ -1,8 +1,10 @@
-#INSTALLATION:
+# INSTALLATION:
 
->pip install -e my_envs
+``` pip install -e my_envs```
 
-##OR
+## OR
 
->cd my_envs
->pip install -e
+``` 
+cd my_envs 
+pip install -e
+```
