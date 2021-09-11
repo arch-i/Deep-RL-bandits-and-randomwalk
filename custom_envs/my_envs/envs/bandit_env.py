@@ -5,6 +5,7 @@ import numpy as np
 
 
 class bernoulliBandit(Env):
+  
   def __init__(self, alpha=1, beta=1, seed=None):
     
     # input parameters for env creation : 
@@ -38,10 +39,11 @@ class bernoulliBandit(Env):
     
     
 class gaussianBandit(Env):
+  
   def __init__(self,seed=None):
     
     # input parameters for env creation : 
-    # alpha, beta, seed
+    # seed
     # action space = [0,1,2 ... 9] 
     
     self.action_space = np.arange(10)
