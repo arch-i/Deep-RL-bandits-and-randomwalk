@@ -4,8 +4,13 @@ import numpy as np
 
 
 class randomWalk(Env):
-  def __init__(self, seed):
-    #actions 0 (left), 1(right)
+ 
+  def __init__(self, seed=None):
+    
+    # input parameters for creating env :
+    # seed
+    # action space : 0 (left), 1(right)
+    
     self.action_space = [0,1]
     self.observation_space=np.arange(7)
     self.state=3
