@@ -24,15 +24,15 @@ class bernoulliBandit(Env):
 
   def step(self, action):
     if action:
-      action = self.rng.binomial(1,self.beta)
+      reward = self.rng.binomial(1,self.beta)
     else:
-      action = self.rng.binomial(1,1-self.alpha)
-    self.state += -1 + 2*action
-    reward = action
+      reward = self.rng.binomial(1,1-self.alpha)
+    self.state +=  2*reward - 1
     return reward
 
   def render(self):
     pass
+  
   def reset(self):
     self.state=1
     
@@ -53,7 +53,6 @@ class gaussianBandit(Env):
     self.rewards = np.zeros(10)
     for i in range(10):
       self.rewards[i]= rng.normal(0,1,1)
-    
   
   def __str__(self):
     return '10 armed Gaussian Bandit with rewards: ' + str(self.rewards)
@@ -65,5 +64,6 @@ class gaussianBandit(Env):
 
   def render(self):
     pass
+  
   def reset(self):
     self.state=0
