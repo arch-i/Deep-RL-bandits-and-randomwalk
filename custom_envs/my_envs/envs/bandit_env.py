@@ -52,13 +52,13 @@ class gaussianBandit(Env):
     self.rng = np.random.default_rng(seed)
     self.rewards = np.zeros(10)
     for i in range(10):
-      self.rewards[i]= rng.normal(0,1,1)
+      self.rewards[i]= self.rng.normal(0,1,1)
   
   def __str__(self):
     return '10 armed Gaussian Bandit with rewards: ' + str(self.rewards)
 
   def step(self, action):
-    reward = rng.normal(self.rewards[action],1,1)
+    reward = self.rng.normal(self.rewards[action],1,1)
     self.state = action+1
     return reward
 
