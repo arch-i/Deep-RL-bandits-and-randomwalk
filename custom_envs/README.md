@@ -1,10 +1,4 @@
 # INSTALLATION:
+To install the custom environments created 
+``` pip install -e custom_envs```
 
-``` pip install -e my_envs```
-
-## OR
-
-``` 
-cd my_envs 
-pip install -e
-```
