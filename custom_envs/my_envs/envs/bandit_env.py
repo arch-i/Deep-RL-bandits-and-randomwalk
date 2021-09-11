@@ -4,8 +4,9 @@ import numpy as np
 
 
 
+## input parameters for env creation : alpha, beta, seed
 class bernoulliBandit(Env):
-  def __init__(self, alpha, beta, seed):
+  def __init__(self, alpha=1, beta=1, seed=None):
     #actions 0 (left), 1(right)
     self.action_space = [0,1]
     self.observation_space=[0,1,2]
@@ -33,8 +34,9 @@ class bernoulliBandit(Env):
     
     
     
+## input parameters for env creation : seed
 class gaussianBandit(Env):
-  def __init__(self,seed):
+  def __init__(self,seed=None):
     #actions 10 
     self.action_space = np.arange(10)
     self.observation_space=np.arange(11)
