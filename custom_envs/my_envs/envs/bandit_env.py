@@ -4,7 +4,6 @@ import numpy as np
 
 
 
-
 class bernoulliBandit(Env):
   def __init__(self, alpha=1, beta=1, seed=None):
     
