@@ -3,7 +3,7 @@ To install the custom environments created
 
 ``` pip install -e custom_envs```
 
-## Structure of the directory
+## Structure of the environments directory
 ```
 custom_envs/
   setup.py
