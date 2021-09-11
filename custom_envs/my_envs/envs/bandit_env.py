@@ -4,10 +4,14 @@ import numpy as np
 
 
 
-## input parameters for env creation : alpha, beta, seed
+
 class bernoulliBandit(Env):
   def __init__(self, alpha=1, beta=1, seed=None):
-    #actions 0 (left), 1(right)
+    '''
+    input parameters for env creation : 
+    alpha, beta, seed
+    actions space: 0 (left), 1(right)
+    '''
     self.action_space = [0,1]
     self.observation_space=[0,1,2]
     self.state=1
@@ -34,10 +38,13 @@ class bernoulliBandit(Env):
     
     
     
-## input parameters for env creation : seed
 class gaussianBandit(Env):
   def __init__(self,seed=None):
-    #actions 10 
+    '''
+    input parameters for env creation : 
+    alpha, beta, seed
+    action space = [0,1,2 ... 9] 
+    '''
     self.action_space = np.arange(10)
     self.observation_space=np.arange(11)
     self.state=0
